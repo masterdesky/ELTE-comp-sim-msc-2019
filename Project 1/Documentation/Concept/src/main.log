@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  1 OCT 2019 00:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  1 OCT 2019 00:38
 entering extended mode
 **./main.tex
 (main.tex
@@ -870,11 +870,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20649 strings out of 492895
- 333757 string characters out of 3133476
- 685228 words of memory out of 3000000
- 24350 multiletter control sequences out of 15000+200000
- 15793 words of font info for 43 fonts, out of 3000000 for 9000
+ 20668 strings out of 492895
+ 333961 string characters out of 3133476
+ 688228 words of memory out of 3000000
+ 24359 multiletter control sequences out of 15000+200000
+ 18563 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,7n,41p,861b,743s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
@@ -885,12 +885,17 @@ onts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Lordpb\AppData\Local\M
 iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Lordpb\AppD
 ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\
 Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on main.pdf (1 page, 81583 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb>
+Output written on main.pdf (1 page, 123160 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
+ 240 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
