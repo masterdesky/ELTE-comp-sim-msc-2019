@@ -1,28 +1,41 @@
 \selectlanguage{english}
 \begin{abstract}
-    \noindent 
+    \noindent For the first project of the Computer Simulations (ELTE Physics MSc) course I propose a concept of an N-body simulation, which aims to reproduce the satellite formation inside asteroid belts around a larger stellar object (eg. a gas giant or a star). Due to the N-body simulations' high computational difficulty, my spare objective is to observe at least some form of clustering process inside these type of systems. To achieve these goals, I will use Newton's law of universal gravitation, solving the particles' equation of motion by a simple 4th order Runge-Kutta function. Other numerical methods - described in Sec. III. will be optionally tested.
 \end{abstract}
 
 \begin{multicols}{2}
 \section{Introduction}
-The problem of gravitational- or electromagnetic attraction of more, than 2 bodies are impossible to solve analitically, except for some few special cases. To study the motion of the particles in such systems we're ought to rely on numerical simulations and approximations. The computational difficulty of the problem grows non-linearly as we try to simulate more and more particles, and thus these simulations are required to be reinforced by some clever numerical tricks to overcome the barrier of immense computational times.
+The problem of gravitational- or electromagnetic attraction of more, than 2 bodies are impossible to solve analitically, except for some finite special cases. To study the motion of the particles in such systems we're ought to rely on numerical simulations and approximations. The computational difficulty of the problem grows non-linearly as we try to simulate more and more particles, and thus these simulations are required to be reinforced by some clever numerical tricks to overcome the barrier of immense computational times.
 
 \section{Motivation}
 As I've already worked with numerical simulations of many-body systems, using two- and three-body approximations, I've choosen the topic of N-body simulations unhesitantly to work on as the first project of the Computer Simulations course. Also being fascinated by astronomical questions and problems, the choosing of the topic was an overally trivial decision for me. My goals are to improve my knowledge about simple N-body simulations and to learn to use some generally useful numerical tricks while working on the assignment.
 
 \section{Description of the proposed assignment}
-Inside a dense asteroid or planetary debris belt it is inevitable for larger objects to form. This belt could be either orbiting around a central star, or a planet. In both cases, moons or dwarf planets will be created by the constant collisions of the individual smaller bodies. My proposed assignment is to simulate the N-body problem of such system of maximally $10^5$ bodies and monitor its density changes and observe the formation of clusters or even greater satellites with DBSCAN or mean-shift methods. In a star - planet - asteroids system it is also possible to observe the formation of asteroid clusters around Lagrange points, which could be an extra task for the project. \newline
-To evade all possible infinities or huge numerical errors, I will work with spherical rigid bodies, instead of point-like particles. To speed up the processing, I propose to experimentally use a neighbour list method with some reasonable cut-off distance, similar to used in molecular dynamics simulation. Reason for this, that at great distances the gravitational pull between smaller ojects can be bravely neglected, and thus the efficiency of the simulation could be greatly enhanched. However I have no idea how does this method affects or deteriorates the accuracy of the simulation. I think at least it deserves a chance.
+Inside a dense asteroid or planetary debris belt it is inevitable for larger objects to form. This belt could be either orbiting around a central star, or a planet. In both cases, moons or dwarf planets will be created by the constant collisions of the individual smaller bodies. My proposed assignment is to simulate the N-body problem of such system of maximally $10^5$ bodies and monitor its density changes and observe the formation of clusters or even greater satellites with DBSCAN or mean-shift methods. Furthermore to achieve somewhat more realistic results, I propose to implement a simple collision system between the colliding bodies. In a star - planet - asteroids system it is also possible to observe the formation of asteroid clusters around Lagrange points, which could be an extra task for the project. \newline
+To evade all possible infinities or huge numerical errors, I will work with spherical rigid bodies, instead of point-like particles. To speed up the processing, I propose to experimentally use a neighbour list method with some reasonable cut-off distance, similar to used in molecular dynamics simulation. Reason for this, that at great distances the gravitational pull between smaller ojects can be bravely neglected, and thus the efficiency of the simulation could be greatly enhanched. However I have no idea how does this approximation affects or deteriorates the accuracy of the simulation. I think at least it deserves a chance.
 
 \section{Theoretical background}
 Due to my very limited free time and the short deadline for the final submission, I decided to work using the Newtonian gravitational theory only. In this case it becomes pretty straightforward to write down the necessary equations of motion. The force, acting on the $i$th body could be described by the following sum:
 
 \begin{equation}
-\boldsymbol{F}_{i}
+m_{i} \boldsymbol{\ddot{r}}_{i}
 =
-\sum_{i \neq j} \frac{m_{i} m_{j}}{r_{ij}^{2}} \boldsymbol{\hat{r}}_{ij}
-=
-\sum_{i \neq j} \frac{m_{i} m_{j}}{r_{ij}^{3}} \boldsymbol{r}_{ij}
+- G \sum_{i \neq j} \frac{m_{i} m_{j}}{\left| r_{i} - r_{j} \right|^{2}} \frac{\boldsymbol{r}_{i} - \boldsymbol{r}_{j}}{\left| r_{i} - r_{j} \right|}
 \end{equation}
+Using this, one can simply describe the acceleration acting on the $i$th body:
+
+\begin{equation}
+\boldsymbol{\ddot{r}}_{i}
+=
+- G \sum_{i \neq j} \frac{m_{j}}{\left| r_{i} - r_{j} \right|^{2}} \frac{\boldsymbol{r}_{i} - \boldsymbol{r}_{j}}{\left| r_{i} - r_{j} \right|}
+\end{equation}
+Which differential equation essentially should be solved numerically for the $x$, $y$ and $z$ components of the $\boldsymbol{r}$ vector to acquire the coordinates and velocities of the individual particles.
+
+\section{Problems and spare objective}
+N-body simulations are $\mathcal{O} \left( N ^{2} \right)$ hard problems, which in the absence of powerful computational systems, makes these simulations pretty useless for the observation of longterm processes, when too much particle is present. If my initial idea - to observe formation of compact satellites and moons - fails, I aim to try to at least monitor the formation of denser clusters and groups inside my asteroid system. \newline
+It could be also provide unsatisfactory results if the initial system is not stable, and all particles simply ejected from the solar system after a while. I really do hope this won't happen...
+
+\section{Technical deteails}
+I'm the most confident working in Python 3.X enviroments, and prefering mostly Jupyter Notebooks. The used tools and libraries will be only Python-related. I also use FFmpeg to generate animations of the simulated systems. If it is possible, I will upload some animations of my project on my YouTube channel.
 
 \end{multicols}
