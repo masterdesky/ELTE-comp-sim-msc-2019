@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  25 OCT 2019 20:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  25 OCT 2019 23:57
 entering extended mode
 **./main.tex
 (main.tex
@@ -865,51 +865,67 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 112.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [2])
+)
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 2 might be wrong on input line 120.
+
+
+[2])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 20.
  [3]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 20.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 20.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 20.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5EC9A1E185FDEFAC5BCBFB38F4B5C4E7;842.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 345AFA6F983AF5756E9E9C8A64C81138;847
+(rerunfilecheck)             After:  965D1DC5251186ED6DF3B85928E04E10;997.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20925 strings out of 492895
- 339249 string characters out of 3133476
- 684226 words of memory out of 3000000
- 24584 multiletter control sequences out of 15000+200000
- 21096 words of font info for 56 fonts, out of 3000000 for 9000
+ 20942 strings out of 492895
+ 339422 string characters out of 3133476
+ 683226 words of memory out of 3000000
+ 24593 multiletter control sequences out of 15000+200000
+ 23867 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,7n,55p,861b,1617s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,8n,55p,861b,1617s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecti1095.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
-n/ec/dpi600\ectt1095.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Lordpb\AppData\Local\M
-iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Lordpb\AppD
-ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\
-Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk>
+n/ec/dpi600\ectt0900.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Lordpb\AppData\Local\M
+iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Lordpb\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\
+Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk>
  <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
-crm1440.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecbx1728.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecbx1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (3 pages, 194943 bytes).
+crm1000.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecbx1000.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Lordpb\AppData\Local\MiK
+TeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Lordpb\AppDat
+a\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (3 pages, 206904 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
+ 444 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
