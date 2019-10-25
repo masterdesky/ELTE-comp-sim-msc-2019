@@ -5,37 +5,133 @@
 
 \begin{multicols}{2}
 \section{Introduction}
-The problem of gravitational- or electromagnetic attraction of more, than 2 bodies are impossible to solve analitically, except for some finite special cases. To study the motion of the particles in such systems we're ought to rely on numerical simulations and approximations. The computational difficulty of the problem grows non-linearly as we try to simulate more and more particles, and thus these simulations are required to be reinforced by some clever numerical tricks to overcome the barrier of immense computational times.
-
-\section{Motivation}
-As I've already worked with numerical simulations of many-body systems, using two- and three-body approximations, I've choosen the topic of N-body simulations unhesitantly to work on as the first project of the Computer Simulations course. Also being fascinated by astronomical questions and problems, the choosing of the topic was an overally trivial decision for me. My goals are to improve my knowledge about simple N-body simulations and to learn to use some generally useful numerical tricks while working on the assignment.
-
-\section{Description of the proposed assignment}
-Inside a dense asteroid or planetary debris belt it is inevitable for larger objects to form. This belt could be either orbiting around a central star, or a planet. In both cases, moons or dwarf planets will be created by the constant collisions of the individual smaller bodies. My proposed assignment is to simulate the N-body problem of such system of maximally $10^5$ bodies and monitor its density changes and observe the formation of clusters or even greater satellites with DBSCAN or mean-shift methods. Furthermore to achieve somewhat more realistic results, I propose to implement a simple collision system between the colliding bodies. In a star - planet - asteroids system it is also possible to observe the formation of asteroid clusters around Lagrange points, which could be an extra task for the project. \newline
-To evade all possible infinities or huge numerical errors, I will work with spherical rigid bodies, instead of point-like particles. To speed up the processing, I propose to experimentally use a neighbour list method with some reasonable cut-off distance, similar to used in molecular dynamics simulation. Reason for this, that at great distances the gravitational pull between smaller ojects can be bravely neglected, and thus the efficiency of the simulation could be greatly enhanched. However I have no idea how does this approximation affects or deteriorates the accuracy of the simulation. I think at least it deserves a chance.
+The problem of gravitational- or electromagnetic attraction of more, than 2 bodies are impossible to solve analitically, except for some finite special cases. To study the motion of the particles in such systems we're ought to rely on numerical simulations and approximations. The computational difficulty of the problem grows non-linearly as we try to simulate more and more particles, and thus these simulations are required to be reinforced by some clever numerical tricks to overcome the barrier of immense computational times. \par
+In this project I tried to create a gravitational n-body simulation, which could be used to simulate the motion of relatively small, but still interesting amount of bodies. As I've achieved pretty good values for runtime, it was still too slow, to simulate a system with eg. 1000 bodies on my personal computer for hundreds of years. In this paper I present my current results at the deadline.
 
 \section{Theoretical background}
-Due to my very limited free time and the short deadline for the final submission, I decided to work using the Newtonian gravitational theory only. In this case it becomes pretty straightforward to write down the necessary equations of motion. The force, acting on the $i$th body could be described by the following sum:
+In the short description I've already covered some of the theoretical background of the gravitational n-body problem. I've already wrote, that the force, acting on the $i$th body could be described by the following sum:
 
-\begin{equation}
+\begin{equation} \label{eq:1}
 m_{i} \boldsymbol{\ddot{r}}_{i}
 =
 - G \sum_{i \neq j} \frac{m_{i} m_{j}}{\left| r_{i} - r_{j} \right|^{2}} \frac{\boldsymbol{r}_{i} - \boldsymbol{r}_{j}}{\left| r_{i} - r_{j} \right|}
 \end{equation}
 Using this, one can simply describe the acceleration acting on the $i$th body:
 
-\begin{equation}
+\begin{equation} \label{eq:2}
 \boldsymbol{\ddot{r}}_{i}
 =
 - G \sum_{i \neq j} \frac{m_{j}}{\left| r_{i} - r_{j} \right|^{2}} \frac{\boldsymbol{r}_{i} - \boldsymbol{r}_{j}}{\left| r_{i} - r_{j} \right|}
 \end{equation}
-Which differential equation essentially should be solved numerically for the $x$, $y$ and $z$ components of the $\boldsymbol{r}$ vector to acquire the coordinates and velocities of the individual particles.
+Which differential equation essentially should be solved numerically for the $x$, $y$ and $z$ components of the $\boldsymbol{r}$ vector to acquire the coordinates and velocities of the individual particles. \par
+In 3D coordinates it is an article-level problem to study the possible 3D trajectories \citep{3Dtrajectory} and the system could be seriously unstable. After acknowledging these facts, I decided to study the behavior of the setup, where the objects are scattered in a 2D plane around a central object. In my simulations the central object was the Jupiter, and the objects around it symbolized the asteroid belt.
 
-\section{Problems and spare objective}
-N-body simulations are $\mathcal{O} \left( N ^{2} \right)$ hard problems, which in the absence of powerful computational systems, makes these simulations pretty useless for the observation of longterm processes, when too much particle is present. If my initial idea - to observe formation of compact satellites and moons - fails, I aim to try to at least monitor the formation of denser clusters and groups inside my asteroid system. \newline
-It could be also provide unsatisfactory results if the initial system is not stable, and all particles simply ejected from the solar system after a while. I really do hope this won't happen...
+\section{Preliminary setup of the simulation}
+To unambiguously define the initial setup of the system, I decided to create an asteroid-generation pipeline, following the same steps in order in the generation of every new objects. \par
+At the I. step the size and mass of the central object where chosen, along with number of small bodies as well. \par
+At the II. step the pipeline generated spherical bodies with various sizes, but constant densities. The masses were calculated next from these two values. Here, only the minimal and maximal radius of the small bodies were given to the pipeline. For the densities I've chosen $\rho_{S} = 2270\ \text{kg}/\text{m}^{3}$ consistently, which is a relatively medium-size value for asteroids \citep{krasinsky2002hidden}. \par
+At the III. step the initial coordinates and velocities of the small bodies were generated. According to Kepler's first law, a satellite orbits a central object on an elliptic orbit, where the central object is situated in one of the focal points. When the object is gravitationally bound, its orbit's shape is an ellipse or in special case, a circle. The distance of the satellite from the central body could be easily expressed:
 
-\section{Technical deteails}
-I'm the most confident working in Python 3.X enviroments, and prefering mostly Jupyter Notebooks. The used tools and libraries will be only Python-related. I also use FFmpeg to generate animations of the simulated systems. If it is possible, I will upload some animations of my project on my YouTube channel.
+\begin{equation} \label{eq:3}
+d
+=
+\frac{r_{p}}{1 + e * \cos{\varphi}}
+\end{equation}
+where $r_{p}$ is the length of the perigee, $e$ is the eccentricity, $\varphi$ is the polar angle. Here, I generated random $r_{p}$ perigee distances and $e$ eccentricities from a pre-defined interval. The possible perigee distances' values were $r_{p} = 10 R \pm 1.5 R$, where $R$ is the radius of the central planet, while the maximal eccentricity was chosen to be $e_{max} = 0.4$. Using this two values, the semi-major ($a$) and semi-minor ($b$) axis of the trajectories for every body could be calculated, as follows:
+
+\begin{equation} \label{eq:4}
+a = \frac{r_{p}}{1 - e^2}
+\end{equation}
+\begin{equation} \label{eq:5}
+b = \frac{r_{p}}{\sqrt{1 - e^2}}
+\end{equation}
+After this, I generated a random $\varphi$ azimuth angle and calculated the coordinates, using the following forms:
+
+\begin{equation} \label{eq:6}
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+=
+\begin{pmatrix}
+a * \cos{\varphi} \\
+b * \sin{\varphi}
+\end{pmatrix}
+\end{equation}
+Using the Vis-Viva equation the length of the velocity vector $\left| \boldsymbol{v} \right|$ could be calculated, if the initial setup for every small body is considered as a two-body problem of the asteroid and the central object. Since the masses of the small bodies are very small, compared the to central object, it is a perfectly fine to use this approximation.
+
+\begin{equation} \label{eq:7}
+\left| \boldsymbol{v} \right|
+=
+\sqrt{GM \left( \frac{2}{a} - \frac{1}{d} \right)}
+\end{equation}
+where $G$ is the gravitational constant, $M$ is the mass of the central object, $a$ is the semi-major axis of the currently described small body, $d$ is the distance of this body from the central object's center of mass. We also know, that the velocity vector always a tangent of the satellites trajectory in every point. It could be calculated by taking the gradient of the ellipse's coordinates:
+
+\begin{equation} \label{eq:8}
+\boldsymbol{e}_{t}
+=
+\frac{\boldsymbol{\nabla} \boldsymbol{r}}{\left| \boldsymbol{r} \right|}
+=
+\frac{1}{\left| \boldsymbol{r} \right|}
+\boldsymbol{\nabla}
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+=
+\frac{1}{\left| \boldsymbol{r} \right|}
+\boldsymbol{\nabla}
+\begin{pmatrix}
+a * \cos{\varphi} \\
+b * \sin{\varphi}
+\end{pmatrix}
+\end{equation}
+\begin{equation} \label{eq:9}
+\boldsymbol{e}_{t}
+=
+\frac{1}{\left| \boldsymbol{r} \right|}
+\begin{pmatrix}
+-a * \sin{\varphi} \\
+b * \cos{\varphi}
+\end{pmatrix}
+\end{equation}
+The actual velocity vector then could be written in the following form, using the result from the (\ref{eq:7}) equation:
+
+\begin{equation} \label{eq:10}
+\boldsymbol{v}_{t}
+=
+\frac{\left| \boldsymbol{v} \right|}{\left| \boldsymbol{r} \right|}
+\begin{pmatrix}
+-a * \sin{\varphi} \\
+b * \cos{\varphi}
+\end{pmatrix}
+\end{equation}
+After acquiring the velocity vectors and coordinates, the (\ref{eq:2}) differential equation could be solved for every $i$th object numerically.
+
+\section{Technical details}
+I used a simple (not adaptive) fourth-order Runge-Kutta function to solve the equation of motions for the individual bodies. Since I used Python (especially Jupyter Notebook) for my simulation, it was crucial to speed up the process, since Python is not the fastest programming language regarding runtime. I used two different method to achieve a speed-up. First, the simulation only calculated the $j$th force acting on the $i$th object, if the asteroids, indexed by $i$ and $j$ were closer, than $2R$ to each other. Second, I used the \texttt{numba} library's \texttt{@jit(nopython=True)} decorator to greatly optimize my code. Of course, it has strict limitations, so I was forced to write my code accordingly.
+
+\section{Solving the differential equation}
+To solve the equation of motions numerically for all bodies, I used a fourth-order Runge-Kutta function as it was already mentioned above. The functionality of this iterative algorithm is well-known and is the following:
+
+\begin{equation}
+k_{1} = dt * \dot{y}_{n}
+\end{equation}
+\begin{equation}
+k_{2} = dt * \left( \dot{y}_{n} + 0.5 * k_1 \right)
+\end{equation}
+\begin{equation}
+k_{3} = dt * \left( \dot{y}_{n} + 0.5 * k_2 \right)
+\end{equation}
+\begin{equation}
+k_{4} = dt * \left( \dot{y}_{n} + k_3 \right)
+\end{equation}
+\begin{equation}
+dy = \frac{k_{1} + 2 * k_{2} + 2 * k_{3} + k_{4}}{6}
+\end{equation}
+\begin{equation}
+y_{n+1} = y_{n} + dy
+\end{equation}
+
 
 \end{multicols}
