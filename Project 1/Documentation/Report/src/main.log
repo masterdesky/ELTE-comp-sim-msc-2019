@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  25 OCT 2019 23:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  26 OCT 2019 12:38
 entering extended mode
 **./main.tex
 (main.tex
@@ -878,24 +878,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 20.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 20.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 20.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 345AFA6F983AF5756E9E9C8A64C81138;847
-(rerunfilecheck)             After:  965D1DC5251186ED6DF3B85928E04E10;997.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 965D1DC5251186ED6DF3B85928E04E10;997.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20942 strings out of 492895
- 339422 string characters out of 3133476
+ 20943 strings out of 492895
+ 339433 string characters out of 3133476
  683226 words of memory out of 3000000
- 24593 multiletter control sequences out of 15000+200000
+ 24594 multiletter control sequences out of 15000+200000
  23867 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  43i,8n,55p,861b,1617s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -923,9 +916,9 @@ nts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (3 pages, 206904 bytes).
+Output written on main.pdf (3 pages, 207256 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
+ 447 PDF objects out of 1000 (max. 8388607)
  29 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
