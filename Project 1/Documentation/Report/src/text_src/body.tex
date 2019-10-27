@@ -70,16 +70,16 @@ where $G$ is the gravitational constant, $M$ is the mass of the central object, 
 \begin{equation} \label{eq:8}
 \boldsymbol{e}_{t}
 =
-\frac{\boldsymbol{\nabla} \boldsymbol{r}}{\left| \boldsymbol{r} \right|}
+\frac{\boldsymbol{\nabla} \boldsymbol{r}}{\left| \boldsymbol{\nabla} \boldsymbol{r} \right|}
 =
-\frac{1}{\left| \boldsymbol{r} \right|}
+\frac{1}{\left| \boldsymbol{\nabla} \boldsymbol{r} \right|}
 \boldsymbol{\nabla}
 \begin{pmatrix}
 x \\
 y
 \end{pmatrix}
 =
-\frac{1}{\left| \boldsymbol{r} \right|}
+\frac{1}{\left| \boldsymbol{\nabla} \boldsymbol{r} \right|}
 \boldsymbol{\nabla}
 \begin{pmatrix}
 a * \cos{\varphi} \\
@@ -89,7 +89,7 @@ b * \sin{\varphi}
 \begin{equation} \label{eq:9}
 \boldsymbol{e}_{t}
 =
-\frac{1}{\left| \boldsymbol{r} \right|}
+\frac{1}{\left| \boldsymbol{\nabla} \boldsymbol{r} \right|}
 \begin{pmatrix}
 -a * \sin{\varphi} \\
 b * \cos{\varphi}
@@ -100,7 +100,7 @@ The actual velocity vector then could be written in the following form, using th
 \begin{equation} \label{eq:10}
 \boldsymbol{v}_{t}
 =
-\frac{\left| \boldsymbol{v} \right|}{\left| \boldsymbol{r} \right|}
+\frac{\left| \boldsymbol{v} \right|}{\left| \boldsymbol{\nabla} \boldsymbol{r} \right|}
 \begin{pmatrix}
 -a * \sin{\varphi} \\
 b * \cos{\varphi}
@@ -136,6 +136,16 @@ y_{n+1} = y_{n} + dy
 In the simulation the $\dot{y}_{n}$ represented the $\dot{r}$ and $\ddot{r}$ values as well, which were incremented in parallel.
 
 \section{Results and problems}
+The results were quite disappointing, and I didn't have enough time to fix the trivial, but crucial problem with my simulation. The whole code works very well, at least it doesn't have any logical or physical flaws. The main problem was, that immediately from the beginning, the orbiting bodies' kinetic energy started to grow, which is quite a surprise for an RK4 algorithm, as it is much more common phenomenon, when using the simple Euler's method. \par
+After many unsuccessful fixing attempt, - at first glance - I finally solved the problem by choosing the time-step to a smaller value. By trial and error I found, that with $dt > 0.002$ years, the simulation becomes highly unstable. From this point, I've started to work with $dt = 0.001$ years long time-step. It could be also an acceptable and working solution, if I'd change RK4 to some higher-order Runge-Kutta function, but I've had very limited time, as I've mentioned it already. Sadly, RK4 still didn't reserved kinetic energy for longer time periods, and started to slightly, but continuously grow.
 
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{{img_src/kin_E_max_5_y_dt_0.001_y}.pdf}
+    \captionof{figure}{Kinetic energy changes of an arbitrary satellite. A slight grow of the curve could be observed. The local extremas are marked by red and oranges 'X' markers.} \label{fig:1}
+\end{center}
+Using these parameters, some output could be seen on figure (\ref{fig:2}) and figure (\ref{fig:3}) to demonstrate the functionality of the simulation.
+
+\section{Discussion}
+At last, I've successfully built a gravitational n-body problem simulation, which could handle time-steps relatively fast. Since I couldn't let the simulation run for longer time, and with smaller time-steps, I couldn't detect any kind of gravitational clustering, or Moon-formation in an asteroid belt.
 
 \end{multicols}
