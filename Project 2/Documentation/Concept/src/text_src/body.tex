@@ -9,39 +9,51 @@ The aim of molecular dynamics simulations are to make it possible to effectively
 The method which will be used here was introduced by Loup Verlet in his notorious paper \citep{verlet1967computer}. Along with the numerical corrections proposed by also him, this type of algorithm could be used to simulate a molecular system $10$ times faster, than the Runge-Kutta method.
 
 \section{Motivation}
-Since I've run out of time during the making of the previous project, I decided to do a more simple, but still interesting and visually appealing simulation. Last year I've already tried 
+Since I've run out of time during the making of the previous project, I decided to do a more simple, but still interesting and visually appealing simulation. Last year I've already tried  to solve this problem, but my results of measuring some thermodynamic quantities with the Verlet method were miserable. I hope with my since improved insights and knowledge I could provide much better results and visualization.
 
 \section{Description of the proposed assignment}
 In this project I will build a molecular dynamics simulation, using the Velocity-Verlet integration. As a reasonable approximation for the interaction between the particles, I'm going to use the Lennard-Jones potential, which is often used in the approximate description of the interaction between a pair of neutral atoms or molecules. \par
 Since this potential is short-ranged, the effect of the distant particles could simply ignored outside an $r_{c}$ cut-off distance, thus creating a so-called "truncated and shifted Lennard-Jones potential". This cut-off distance is usually chosen to be $r_{c} = 2.5 \sigma$ \citep{2011JChPh.134h1102T}, where $\sigma$ is the finite distance at which the Lennard-Jones potential is zero. In conclusion, when calculating the forces acting on a single particle, instead of calculating the effect of every molecule, we calculate the forces from those particles only, which are situated within a sphere of $r_{c}$ radius around our central one. \par
-It is also advised to implement Verlet's pair-listing method to speed up the simulation. If we first select all of the particles inside an $r_{c}$ radius around a single particle at every step, the simulation would be still very slow, because it is an $\mathcal{O} \left( N^{2} \right)$ hard problem. To solve this, we define a sphere around every particle with $r_{\text{max}} > r_{c}$ radius, and we call the list of every particle inside the $i$th sphere the pair-list of the $i$th particle. If during the calculation of forces acting on the $i$th particle we only need to loop through its neighbours inside the $i$th pair-list, without the need of selecting nearby ($r < r_{c}$) particles at every step. Since microscopic objects move at a finite speed, it is trivial that if we choose $r_{\text{max}} > r_{c}$, we only need to update this list only after every few step, because the interacting particles need a finite amount of time to move out from it. The standard value of $r_{max} = 3.2 \sigma$ usually.
+It is also advised to implement Verlet's pair-listing method to speed up the simulation. If we first select all of the particles inside an $r_{c}$ radius around a single particle at every step, the simulation would be still very slow, because it is an $\mathcal{O} \left( N^{2} \right)$ hard problem. To solve this, we define a sphere around every particle with $r_{\text{max}} > r_{c}$ radius, and we call the list of every particle inside the $i$th sphere the pair-list of the $i$th particle. If during the calculation of forces acting on the $i$th particle we only need to loop through its neighbours inside the $i$th pair-list, without the need of selecting nearby ($r < r_{c}$) particles at every step. Since microscopic objects move at a finite speed, it is trivial that if we choose $r_{\text{max}} > r_{c}$, we only need to update this list only after every few step, because the interacting particles need a finite amount of time to move out from it. The standard value of $r_{max} = 3.2 \sigma$ usually. \par
+For the simulation I've chosen the following values for these discussed parameters:
+
+\begin{equation}
+\text{\texttt{r\_c}} = 2.5
+\end{equation}
+\begin{equation}
+\text{\texttt{r\_max}} = 3.2
+\end{equation}
+\begin{equation}
+\text{\texttt{update\_interval}} = 10
+\end{equation}
+Where \texttt{update\_interval} is the number of steps, after the pair-list is updated.
 
 \section{Theoretical background}
 \subsection{Verlet and velocity Verlet algorithm}
 The advisedly used algorithm (velocity Verlet method) is a variation of the somewhat simpler Verlet method. Both of them have their pros and cons. While the Verlet method's accuracy ($\mathcal{O} \left( \tau^{4} \right)$) approaches the Runge-Kutta's ($\mathcal{O} \left( \tau^{5} \right)$), it can't be started from a single initial position, since its stepping rule uses the $n$th and $(n-1)$th positions and velocities to calculate the $(n+1)$th values. The stepping rule is the following:
 
 \begin{equation}
-\vec{R}_{n+1}
+\boldsymbol{r}_{n+1}
 =
-2 \vec{R}_{n} - \vec{R}_{n-1} + \tau^{2} \vec{A}_{n} + \mathcal{O} \left( \tau^{4} \right)
+2 \boldsymbol{r}_{n} - \boldsymbol{r}_{n-1} + \tau^{2} \boldsymbol{a}_{n} + \mathcal{O} \left( \tau^{4} \right)
 \end{equation}
 \begin{equation}
-\vec{V}_{n+1}
+\boldsymbol{v}_{n+1}
 =
-\frac{\vec{R}_{n+1} - \vec{R}_{n-1}}{2 \tau} +  \mathcal{O} \left( \tau^{2} \right)
+\frac{\boldsymbol{r}_{n+1} - \boldsymbol{r}_{n-1}}{2 \tau} +  \mathcal{O} \left( \tau^{2} \right)
 \end{equation}
-Here $\vec{R}$ denotes the coordinate vector and $\vec{V}$ denotes the velocity vector of a particle, $\tau$ is the step size of the simulation. Another disadvantage of the Verlet method, that for the $\vec{V}$ propagation its accuracy is only $\mathcal{O} \left( \tau^{2} \right)$. \par
+Here $\boldsymbol{r}$ denotes the coordinate vector and $\boldsymbol{v}$ denotes the velocity vector of a particle, $\tau$ is the step size of the simulation. Another disadvantage of the Verlet method, that for the $\boldsymbol{v}$ propagation its accuracy is only $\mathcal{O} \left( \tau^{2} \right)$. \par
 In contrast the velocity Verlet method could be started from an arbitrary initial position. Its stepping rule is the following:
 
 \begin{equation}
-\vec{R}_{n+1}
+\boldsymbol{r}_{n+1}
 =
-\vec{R}_{n} + \tau \vec{V}_{n} + \frac{\tau^{2}}{2} \vec{A}_{n} + \mathcal{O} \left( \tau^{3} \right)
+\boldsymbol{r}_{n} + \tau \boldsymbol{v}_{n} + \frac{\tau^{2}}{2} \boldsymbol{a}_{n} + \mathcal{O} \left( \tau^{3} \right)
 \end{equation}
 \begin{equation}
-\vec{V}_{n+1}
+\boldsymbol{v}_{n+1}
 =
-\vec{V}_{n} + \frac{\tau}{2} \left( \vec{A}_{n+1} + \vec{A}_{n} \right) + \mathcal{O} \left( \tau^{3} \right)
+\boldsymbol{v}_{n} + \frac{\tau}{2} \left( \boldsymbol{a}_{n+1} + \boldsymbol{a}_{n} \right) + \mathcal{O} \left( \tau^{3} \right)
 \end{equation}
 If we only want to accurately measure the conservation of energy and the coordinates of the molecules, we can combine the two method, where the first two step is evaluated by the velocity Verlet method, and the following are with the Verlet method. Here I will use only the velocity Verlet method for the whole simulation.
 
@@ -61,21 +73,101 @@ Here $\sigma$ is the already mentioned, finite distance, where the Lennard-Jones
 The force, which is used to calculate the accelerations for the stepping rules could be given by calculating the gradient of the potential:
 
 \begin{equation}
-\vec{F} \left( r \right)
+\boldsymbol{F} \left( r \right)
 =
 -\boldsymbol{\nabla} V^{LJ} \left( r \right)
 =
-\frac{24 V_{0}}{r^{2}} \left[ 2 \left( \frac{\sigma}{r} \right)^{12} - \left( \frac{\sigma}{r} \right)^{6} \right] r
+\frac{24 V_{0}}{r^{2}} \left[ 2 \left( \frac{\sigma}{r} \right)^{12} - \left( \frac{\sigma}{r} \right)^{6} \right] \boldsymbol{r}
 \end{equation}
 Using the cut-off method the Lennard-Jones potential becomes zero at $r \leq r_{c}$. Thus the truncated and shifted Lennard-Jones potential is the following:
 
 \begin{equation}
-V_{tf}^{LJ} \left( r \right)
+V_{c}^{LJ} \left( r \right)
 =
 \begin{cases}
 4 V_{0} \left[ \left( \frac{\sigma}{r} \right)^{12} - \left( \frac{\sigma}{r} \right)^{6} \right] & \text{if}\ r < r_{c} \\
 0 & \text{if}\ r \leq r_{c}
 \end{cases}
 \end{equation}
+
+\subsection{Correction for velocities}
+Choosing the correct starting velocities for the individual particles is is not trivial. I intend to use the \texttt{gasdev()} function found in the \emph{Numerical Recipes}, which solves this problem \citep{press2007numerical}. It uses the Box-Müller algorithm to generate approximately correct velocities with $\sigma=1$ deviation, according to the Maxwell-Boltzman distribution. In 3D it is simply the Gauss distribution:
+
+\begin{equation}
+P \left( v \right)
+=
+\left( \frac{m}{2 \pi k_{B} T} \right)^{3/2}
+*
+e^{-\dfrac{m \left( v_{x}^{2} + v_{y}^{2} + v_{z}^{2} \right)}{2 k_{B} T}}
+\end{equation}
+Unfortunately this algorithm is not perfect, the mean of the starting velocities - the velocity of the center of mass - is not $0$ as it should be. To obtain velocities which are truly chosen according to the Gauss distribution, we should apply a correction. \par
+First, we subtract the velocity of the center of mass from the current velocities:
+
+\begin{equation}
+\boldsymbol{v}_{i} := \boldsymbol{v}_{i} - \boldsymbol{v}_{CM}
+\end{equation}
+Then, we transform them with a $\lambda$ constant term:
+
+\begin{equation}
+\boldsymbol{v}_{i} := \lambda \boldsymbol{v}_{i}
+\end{equation}
+Where this constant is the following:
+
+\begin{equation}
+\lambda
+=
+\sqrt{\frac{2 \left( N - 1 \right) k_{B} T}{\sum_{i=1}^{N} m \boldsymbol{v}_{i}^{2}}}
+\end{equation}
+Thus creating correct initial velocities for the simulation. 
+
+\section{Measurable values}
+To study various thermodynamic variables numerically, it is advised to choose the different parameters in our equations to be equally $1$. This simplification affects the following values (without their dimension):
+
+\begin{equation}
+V_{0} = \sigma = m_{i} = 1
+\end{equation}
+Where $V_{0}$ and $\sigma$ were already discussed, and $m_{i}$ is the mass of the particles in the system. \par
+The different thermodynamic variables mostly could be studied through the Hamiltonian of the system:
+
+\begin{equation}
+\mathcal{H}
+\equiv
+E
+=
+\frac{m}{2} \sum_{i=1}^{N} \boldsymbol{v}_{i}^{2}
++
+\sum_{i \neq j} V \left( \left| \boldsymbol{r}_{i} - \boldsymbol{r}_{j} \right| \right)
+\end{equation}
+Using this quantity, eg. the molar heat capacity at constant $V$, the pressure, and also the compressibility factor could be studied. \par
+The molar heat capacity could be expressed from the fundamental equation of the ideal gas, or also from fluctuation-dissipation theorem as follows:
+
+\begin{equation}
+C_{V}
+=
+\left. \frac{\partial E}{\partial T} \right|_{V}
+=
+\frac{1}{k_{B} T^{2}} \left[ \left< E^{2} \right> - \left< E \right>^{2} \right]
+\end{equation}
+Which quantity's dimension is $\frac{J}{K * mol}$ and its value is approximately between $10^{1} - 10^{2}$ naturally for simple gases. The terms in the
+
+\begin{equation}
+\left[ \left< E^{2} \right> - \left< E \right>^{2} \right]
+\end{equation}
+variance could be approximated by the $E$ and $E^{2}$ values' average over time. \par
+Both the pressure and compressibility factor could be expressed using the Virial theorem. The pressure could be expressed as follows:
+
+\begin{equation}
+PV
+=
+N k_{B} T + \frac{1}{3} \left< \sum_{i < j} \boldsymbol{r}_{i} * \boldsymbol{F}_{ij} \right>
+\end{equation}
+While the compressibility factor could be given by
+
+\begin{equation}
+Z
+=
+\frac{PV}{N k_{B} T}
+\end{equation}
+For ideal gas, it is obviously $Z = 1$, where we get to the well-known ideal gas law. For low pressures this quantity should be $Z < 1$ while for high pressure gases $Z > 1$.
 
 \end{multicols}

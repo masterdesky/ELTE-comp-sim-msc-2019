@@ -81,8 +81,49 @@
     \field{journaltitle}{\jcp}
     \field{eprinttype}{arXiv}
     \field{eprintclass}{cond-mat.soft}
+    \field{month}{02}
     \field{year}{2011}
-    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{press2007numerical}{book}{}
+    \name{author}{4}{}{%
+      {{hash=PWH}{%
+         family={Press},
+         familyi={P\bibinitperiod},
+         given={William\bibnamedelima H},
+         giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=TSA}{%
+         family={Teukolsky},
+         familyi={T\bibinitperiod},
+         given={Saul\bibnamedelima A},
+         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=VWT}{%
+         family={Vetterling},
+         familyi={V\bibinitperiod},
+         given={William\bibnamedelima T},
+         giveni={W\bibinitperiod\bibinitdelim T\bibinitperiod},
+      }}%
+      {{hash=FBP}{%
+         family={Flannery},
+         familyi={F\bibinitperiod},
+         given={Brian\bibnamedelima P},
+         giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge university press}%
+    }
+    \strng{namehash}{PWH+1}
+    \strng{fullhash}{PWHTSAVWTFBP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2007}
+    \field{labeldatesource}{year}
+    \field{title}{Numerical recipes 3rd edition: The art of scientific
+  computing}
+    \field{year}{2007}
   \endentry
 \enddatalist
 \endinput
