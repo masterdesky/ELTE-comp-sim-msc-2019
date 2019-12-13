@@ -109,8 +109,8 @@ b * \cos{\varphi}
 After acquiring the velocity vectors and coordinates, the (\ref{eq:2}) differential equation could be solved for every $i$th object numerically.
 
 \section{Technical details}
-Since I used Python (especially Jupyter Notebook) for my simulation, it was crucial to speed up the process, since Python is not the fastest programming language regarding runtime. I used two different method to achieve a speed-up. First, the simulation only calculated the $j$th force acting on the $i$th object, if the asteroids, indexed by $i$ and $j$ were closer, than $2R$ to each other. Second, I used the \texttt{numba} library's \texttt{@jit(nopython=True)} decorator to greatly optimize my code. This decorator compiles the Python functions into machine code before running them, thus greatly enhancing the runtime. Sadly it has strict limitations, so I was forced to write my code accordingly. \par
-The full source code, used files and everything related to the project could be reached in my GitHub repository\footnote{\url{https://github.com/masterdesky/ELTE\_Comp\_Simulations\_2020}}.
+Since I used Python (especially Jupyter Notebook) for my simulation, it was crucial to speed up the process, since Python is not the fastest programming language regarding runtime. I used two different methods to achieve a speed-up. First, the simulation only calculated the $j$th force acting on the $i$th object, if the asteroids, indexed by $i$ and $j$ were closer, than $2R$ to each other. Second, I used the \texttt{numba} library's \texttt{@jit(nopython=True)} decorator to greatly optimize my code. This decorator compiles the Python functions into machine code before running them, thus greatly enhancing the runtime. Sadly it has strict limitations, so I was forced to write my code accordingly. \par
+The full source code, used files and everything related to the project could be found in my GitHub repository of this course\footnote{\url{https://github.com/masterdesky/ELTE\_Comp\_Simulations\_2020}}.
 
 \section{Solving the differential equations}
 To solve the equation of motions numerically for all bodies, I used a simple (not adaptive) fourth-order Runge-Kutta function. The functionality of this iterative algorithm is well-known and is the following:
@@ -133,20 +133,25 @@ dy = \frac{k_{1} + 2 * k_{2} + 2 * k_{3} + k_{4}}{6}
 \begin{equation}
 y_{n+1} = y_{n} + dy
 \end{equation}
-In the simulation the $\dot{y}_{n}$ represented the $\dot{r}$ and $\ddot{r}$ values as well, which were incremented in parallel.
+In the simulation the $\dot{y}_{n}$ represented the $\dot{r}$ and $\ddot{r}$ values as well, which were incremented by parallel.
 
 \section{Results and problems}
 The results were quite disappointing, and I didn't have enough time to fix the trivial, but crucial problem with my simulation. The whole code works very well, at least it doesn't have any logical or physical flaws. The main problem was, that immediately from the beginning, the orbiting bodies' kinetic energy started to grow, which is quite a surprise for an RK4 algorithm, as it is much more common phenomenon, when using the simple Euler's method. \par
-After many unsuccessful fixing attempt, - at first glance - I finally solved the problem by choosing the time-step to a smaller value. By trial and error I found, that with $dt > 0.002$ years, the simulation becomes highly unstable. From this point, I've started to work with $dt = 0.001$ years long time-step. It could be also an acceptable and working solution, if I'd change RK4 to some higher-order Runge-Kutta function, but I've had very limited time, as I've mentioned it already. Sadly, RK4 still didn't reserved kinetic energy for longer time periods, and started to slightly, but continuously grow.
+After many unsuccessful fixing attempt, - at first glance - I finally solved the problem by choosing the time-step to a smaller value. By trial and error I found, that with $dt \leq 0.001$ years, the simulation becomes highly unstable. Maybe this could be still an acceptable and working parameter, if I'd change RK4 to some higher-order Runge-Kutta function, but I've had very limited time, as I've mentioned it already. Sadly, RK4 still didn't reserved kinetic energy for longer time periods, and started to slightly, but continuously grow. The effect caused by choosing different time steps could be objectively observed by starting the simulation from the same initial conditions with different $dt$ values and let it run for some time.
 
 \begin{center}
-    \includegraphics[width=0.5\textwidth]{{img_src/kin_E_max_5_y_dt_0.001_y}.pdf}
-    \captionof{figure}{Kinetic energy changes of an arbitrary satellite. A slight grow of the curve could be observed. The local extremas are marked by red and oranges 'X' markers.} \label{fig:1}
+    \includegraphics[width=0.5\textwidth]{{img_src/kin_E_max_10_y_dt_0.001_y}.pdf}
+    \captionof{figure}{Kinetic energy changes of an arbitrary satellite with time step $dt=0.001$ for $10$ simulated years. A slight grow of the curve could be observed. The local extremas are marked by red and oranges 'X' markers.} \label{fig:1}
 \end{center}
-Using these parameters, some output could be seen on figure (\ref{fig:3}) and figure (\ref{fig:4}) to demonstrate the functionality of the simulation.
+Using the time step $dt=0.001$ for $10$ simulated years, the final arrangement of the simulated asteroids could be seen on figure (\ref{fig:4}) and figure (\ref{fig:5}). Running the simulation even further, the energy growth of the small objects in the simulated asteroid belt simply blew up the simulation, as they started to move exponentially faster every iteration after some time.
 \begin{center}
     \includegraphics[width=0.5\textwidth]{{img_src/kin_E_max_100_y_dt_0.001_y}.pdf}
-    \captionof{figure}{Kinetic energy changes of an arbitrary satellite. A slight grow of the curve could be observed early, then an exponential upstream blows up the simulation. The local extremas are marked by red and oranges 'X' markers.} \label{fig:2}
+    \captionof{figure}{Kinetic energy changes of an arbitrary satellite with time step $dt=0.001$ for $100$ simulated years. A slight grow of the curve could be observed early, then an exponential upstream blows up the simulation. The local extrema are marked by red and oranges 'X' markers. The growth could be seen best by observing the slope of the red line.} \label{fig:2}
+\end{center}
+In contrast, choosing the step size parameter as $dt = 0.0001$, the energy seemed to remain conserved and the simulation remained totally stable.
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{{img_src/kin_E_max_100_y_dt_0.0001_y}.pdf}
+    \captionof{figure}{Kinetic energy changes of an arbitrary satellite with time step $dt=0.0001$ for $100$ simulated years. There are no relevant energy growth could be seen. The local extrema are marked by red and oranges 'X' markers.} \label{fig:3}
 \end{center}
 
 \section{Discussion}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  12 DEC 2019 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.10.12)  13 DEC 2019 16:14
 entering extended mode
 **./main.tex
 (main.tex
@@ -57,15 +57,15 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@posthook=\toks17
 )
 ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.sty"
-Package: babel 2019/07/19 3.33 The Babel package
+Package: babel 2018/11/13 3.27 The Babel package
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\switch.def"
-File: switch.def 2019/07/19 3.33 Babel switching mechanism
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Program Files\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
@@ -73,7 +73,7 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 Language: english 2017/06/06 v3.3r English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/babel\babel.def"
-File: babel.def 2019/07/19 3.33 Babel common definitions
+File: babel.def 2018/11/13 3.27 Babel common definitions
 \babel@savecnt=\count91
 \U@D=\dimen111
 
@@ -84,13 +84,13 @@ File: babel.def 2019/07/19 3.33 Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/babel-hungarian\magyar.ldf"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/babel-hungarian\magy
+ar.ldf
 Language: magyar 2019/01/14 v1.5c Magyar (Hungarian) support for babel
 Package babel Info: Making ` an active character on input line 2819.
 \c@footnote@add=\count93
 \c@footnote@ch=\count94
-))
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
+)) ("C:\Program Files\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1enc.def"
@@ -155,7 +155,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/cancel\cancel.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/cancel\cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/jknappen\mathrsfs.sty"
@@ -173,7 +173,7 @@ Package color Info: Driver file: pdftex.def on input line 147.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics-cfg\color.cfg"
@@ -194,11 +194,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/graphics\dvipsnam.def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-("C:\Program Files\MiKTeX 2.9\tex/latex/csquotes\csquotes.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/csquotes\csquotes.st
+y
 Package: csquotes 2019/05/10 v5.2e context-sensitive quotations (JAW)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
-Package: etoolbox 2019/09/09 v2.5g e-TeX tools for LaTeX (JAW)
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/etoolbox\etoolbox.st
+y
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count107
 )
 \csq@reset=\count108
@@ -209,22 +211,24 @@ Package: etoolbox 2019/09/09 v2.5g e-TeX tools for LaTeX (JAW)
 \csq@tshold=\count113
 \csq@ltx@everypar=\toks23
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/csquotes\csquotes.def"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/csquotes\csquotes.de
+f
 File: csquotes.def 2019/05/10 v5.2e csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/csquotes\csquotes.cfg"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/csquotes\csquotes.cf
+g
 File: csquotes.cfg 
 )
 Package csquotes Info: Disabling multilingual quotes.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/makecell\makecell.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/makecell\makecell.st
+y
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
-Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2018/11/13 v2.4j Tabular extension package (FMi)
 \col@sep=\dimen121
 \ar@mcellbox=\box29
 \extrarowheight=\dimen122
@@ -254,10 +258,10 @@ Package graphics Info: Driver file: pdftex.def on input line 99.
 \Gin@req@height=\dimen124
 \Gin@req@width=\dimen125
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption.sty
 Package: caption 2019/09/01 v3.3d Customizing captions (AR)
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption3.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/caption\caption3.sty
 Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen126
@@ -273,7 +277,7 @@ Package caption Info: magyar babel option is loaded.
 \c@ContinuedFloat=\count116
 Package caption Info: magyar babel option is loaded.
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/wrapfig\wrapfig.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/wrapfig\wrapfig.sty
 \wrapoverhang=\dimen133
 \WF@size=\dimen134
 \c@WF@wrappedlines=\count117
@@ -281,7 +285,8 @@ Package caption Info: magyar babel option is loaded.
 \WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/titlesec\titlesec.st
+y
 Package: titlesec 2019/09/09 v2.12 Sectioning titles
 \ttl@box=\box32
 \beforetitleunit=\skip48
@@ -292,12 +297,11 @@ Package: titlesec 2019/09/09 v2.12 Sectioning titles
 \titlewidth=\dimen137
 \titlewidthlast=\dimen138
 \titlewidthfirst=\dimen139
-)
-("C:\Program Files\MiKTeX 2.9\tex/latex/tools\indentfirst.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
-Package: hyperref 2019/06/12 v6.88h Hypertext links for LaTeX
+Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
 ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -316,7 +320,7 @@ Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -348,7 +352,7 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 \Hy@pagecounter=\count119
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
-File: pd1enc.def 2019/06/12 v6.88h Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -357,40 +361,40 @@ Now handling font encoding PD1 ...
 ("C:\Program Files\MiKTeX 2.9\tex/latex/00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4424.
+Package hyperref Info: Option `unicode' set `true' on input line 4393.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\puenc.def"
-File: puenc.def 2019/06/12 v6.88h Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2018/11/30 v6.88e Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4550.
-Package hyperref Info: Link nesting OFF on input line 4555.
-Package hyperref Info: Hyper index ON on input line 4558.
-Package hyperref Info: Plain pages OFF on input line 4565.
-Package hyperref Info: Backreferencing OFF on input line 4570.
+Package hyperref Info: Hyper figures OFF on input line 4519.
+Package hyperref Info: Link nesting OFF on input line 4524.
+Package hyperref Info: Hyper index ON on input line 4527.
+Package hyperref Info: Plain pages OFF on input line 4534.
+Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4803.
+Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count121
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/url\url.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/url\url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5156.
+LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen141
 \Fld@menulength=\count122
 \Field@Width=\dimen142
 \Fld@charsize=\dimen143
-Package hyperref Info: Hyper figures OFF on input line 6411.
-Package hyperref Info: Link nesting OFF on input line 6416.
-Package hyperref Info: Hyper index ON on input line 6419.
-Package hyperref Info: backreferencing OFF on input line 6426.
-Package hyperref Info: Link coloring OFF on input line 6431.
-Package hyperref Info: Link coloring with OCG OFF on input line 6436.
-Package hyperref Info: PDF/A mode OFF on input line 6441.
-LaTeX Info: Redefining \ref on input line 6481.
-LaTeX Info: Redefining \pageref on input line 6485.
+Package hyperref Info: Hyper figures OFF on input line 6380.
+Package hyperref Info: Link nesting OFF on input line 6385.
+Package hyperref Info: Hyper index ON on input line 6388.
+Package hyperref Info: backreferencing OFF on input line 6395.
+Package hyperref Info: Link coloring OFF on input line 6400.
+Package hyperref Info: Link coloring with OCG OFF on input line 6405.
+Package hyperref Info: PDF/A mode OFF on input line 6410.
+LaTeX Info: Redefining \ref on input line 6450.
+LaTeX Info: Redefining \pageref on input line 6454.
 \Hy@abspage=\count123
 \c@Item=\count124
 \c@Hfootnote=\count125
@@ -398,7 +402,7 @@ LaTeX Info: Redefining \pageref on input line 6485.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
-File: hpdftex.def 2019/06/12 v6.88h Hyperref driver for pdfTeX
+File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
 \Fld@listcount=\count126
 \c@bookmark@seq@number=\count127
 
@@ -412,7 +416,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `colorlinks' set `true' on input line 52.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/tools\multicol.sty"
-Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+Package: multicol 2018/11/09 v1.8u multicolumn formatting (FMi)
 \c@tracingmulticols=\count128
 \mult@box=\box33
 \multicol@leftmargin=\dimen144
@@ -460,20 +464,21 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \colbreak@box=\box58
 \mc@col@check@num=\count136
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/appendix\appendix.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/appendix\appendix.st
+y
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count137
 \c@@ppsavesec=\count138
 \c@@ppsaveapp=\count139
 )
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.sty"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\biblatex.st
+y
 Package: biblatex 2019/08/31 v3.13a programmable bibliographies (PK/MW)
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
+ (C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count140
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/logreq\logreq.def"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ifthen.sty"
@@ -530,14 +535,14 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \bibhang=\skip60
 \blx@bcfin=\read1
 \blx@bcfout=\write3
-\blx@langwohyphens=\language82
+\blx@langwohyphens=\language76
 \c@mincomprange=\count182
 \c@maxcomprange=\count183
 \c@mincompwidth=\count184
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\blx-dm.def"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2019/08/31 v3.13a biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex citestyle data model...
@@ -631,13 +636,15 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\blx-compat.def"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\blx-compat.
+def
 File: blx-compat.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load BibTeX backend compatibility...
 Package biblatex Info: ... file 'blx-bibtex.def' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\blx-bibtex.def"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\blx-bibtex.
+def
 File: blx-bibtex.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
 
 
@@ -647,7 +654,9 @@ Package biblatex Warning: Using fall-back BibTeX(8) backend:
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.def"
+
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\biblatex.de
+f
 File: biblatex.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
 \c@textcitecount=\count319
 \c@textcitetotal=\count320
@@ -666,7 +675,8 @@ File: biblatex.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\blx-natbib.def"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\blx-natbib.
+def
 File: blx-natbib.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
 Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
  overwriting.
@@ -674,12 +684,14 @@ Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/bbx\numeric.bbx"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/bbx\numeric
+.bbx
 File: numeric.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/bbx\standard.bbx"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/bbx\standar
+d.bbx
 File: standard.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count328
 \c@bbx:relatedtotal=\count329
@@ -687,7 +699,8 @@ File: standard.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/cbx\authoryear.cbx"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/cbx\authory
+ear.cbx
 File: authoryear.cbx 2019/08/31 v3.13a biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -700,7 +713,8 @@ Package biblatex Info: Redefining '\textcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.cfg"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex\biblatex.cf
+g
 File: biblatex.cfg 
 ))
 Package biblatex Info: Redefining '\cite' on input line 80.
@@ -712,7 +726,8 @@ Package biblatex Info: Redefining '\textcite' on input line 122.
 Package biblatex Info: Trying to load language 'magyar'...
 Package biblatex Info: ... file 'magyar.lbx' found.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/lbx\magyar.lbx"
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/lbx\magyar.
+lbx
 File: magyar.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 
 
@@ -729,7 +744,9 @@ Package biblatex Warning: Hungarian localisation module for biblatex loaded.
 )
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/lbx\english.lbx"
+
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/latex/biblatex/lbx\english
+.lbx
 File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 ) (main.aux)
 \openout1 = `main.aux'.
@@ -750,6 +767,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -784,7 +802,9 @@ LaTeX Font Info:    ... okay on input line 11.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
+
+(C:\Users\masterdesky\AppData\Roaming\MiKTeX\2.9\tex/context/base/mkii\supp-pdf
+.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count330
 \scratchdimen=\dimen153
@@ -859,19 +879,19 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 [1
 
 
-{C:/Users/Lordpb/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/masterdesky/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 112.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [2]
-<img_src/kin_E_max_5_y_dt_0.001_y.pdf, id=89, 828.41055pt x 545.2891pt>
-File: img_src/kin_E_max_5_y_dt_0.001_y.pdf Graphic file (type pdf)
-<use img_src/kin_E_max_5_y_dt_0.001_y.pdf>
-Package pdftex.def Info: img_src/kin_E_max_5_y_dt_0.001_y.pdf  used on input li
-ne 143.
-(pdftex.def)             Requested size: 248.16516pt x 163.3467pt.
+<img_src/kin_E_max_10_y_dt_0.001_y.pdf, id=89, 828.41055pt x 546.35558pt>
+File: img_src/kin_E_max_10_y_dt_0.001_y.pdf Graphic file (type pdf)
+<use img_src/kin_E_max_10_y_dt_0.001_y.pdf>
+Package pdftex.def Info: img_src/kin_E_max_10_y_dt_0.001_y.pdf  used on input l
+ine 143.
+(pdftex.def)             Requested size: 248.16516pt x 163.66617pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -899,18 +919,34 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 148--149
  [] 
  []
 
-) [3 <./img_src/kin_E_max_5_y_dt_0.001_y.pdf> <./img_src/kin_E_max_100_y_dt_0.0
-01_y.pdf
+<img_src/kin_E_max_100_y_dt_0.0001_y.pdf, id=93, 831.38786pt x 545.2891pt>
+File: img_src/kin_E_max_100_y_dt_0.0001_y.pdf Graphic file (type pdf)
+<use img_src/kin_E_max_100_y_dt_0.0001_y.pdf>
+Package pdftex.def Info: img_src/kin_E_max_100_y_dt_0.0001_y.pdf  used on input
+ line 153.
+(pdftex.def)             Requested size: 248.16516pt x 162.76427pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 154.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 153--154
+ [] 
+ []
+
+[3 <./img_src/kin_E_max_10_y_dt_0.001_y.pdf> <./img_src/kin_E_max_100_y_dt_0.00
+1_y.pdf
 
 pdfTeX warning: pdflatex (file ./img_src/kin_E_max_100_y_dt_0.001_y.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] [4] (text_src/appendix.tex
-<img_src/scatter_final_max_5_y_dt_0.001_y.pdf, id=234, 1134.63902pt x 1105.7309
-7pt>
-File: img_src/scatter_final_max_5_y_dt_0.001_y.pdf Graphic file (type pdf)
-<use img_src/scatter_final_max_5_y_dt_0.001_y.pdf>
-Package pdftex.def Info: img_src/scatter_final_max_5_y_dt_0.001_y.pdf  used on 
-input line 7.
+>]) [4 <./img_src/kin_E_max_100_y_dt_0.0001_y.pdf>] (text_src/appendix.tex
+<img_src/scatter_final_max_10_y_dt_0.001_y.pdf, id=294, 1134.63902pt x 1105.730
+97pt>
+File: img_src/scatter_final_max_10_y_dt_0.001_y.pdf Graphic file (type pdf)
+<use img_src/scatter_final_max_10_y_dt_0.001_y.pdf>
+Package pdftex.def Info: img_src/scatter_final_max_10_y_dt_0.001_y.pdf  used on
+ input line 7.
 (pdftex.def)             Requested size: 496.33032pt x 483.68863pt.
 
 
@@ -918,13 +954,13 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 8.
 See the caption package documentation for explanation.
 
-[5 <./img_src/scatter_final_max_5_y_dt_0.001_y.pdf>]
-<img_src/velocity_final_max_5_y_dt_0.001_y.pdf, id=242, 1694.73152pt x 1651.369
-45pt>
-File: img_src/velocity_final_max_5_y_dt_0.001_y.pdf Graphic file (type pdf)
-<use img_src/velocity_final_max_5_y_dt_0.001_y.pdf>
-Package pdftex.def Info: img_src/velocity_final_max_5_y_dt_0.001_y.pdf  used on
- input line 15.
+[5 <./img_src/scatter_final_max_10_y_dt_0.001_y.pdf>]
+<img_src/velocity_final_max_10_y_dt_0.001_y.pdf, id=302, 1694.73152pt x 1651.36
+945pt>
+File: img_src/velocity_final_max_10_y_dt_0.001_y.pdf Graphic file (type pdf)
+<use img_src/velocity_final_max_10_y_dt_0.001_y.pdf>
+Package pdftex.def Info: img_src/velocity_final_max_10_y_dt_0.001_y.pdf  used o
+n input line 15.
 (pdftex.def)             Requested size: 496.33032pt x 483.62207pt.
 
 
@@ -932,59 +968,86 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 16.
 See the caption package documentation for explanation.
 
+[6 <./img_src/velocity_final_max_10_y_dt_0.001_y.pdf>]
+<img_src/scatter_final_max_100_y_dt_0.0001_y.pdf, id=311, 1134.63902pt x 1105.7
+3097pt>
+File: img_src/scatter_final_max_100_y_dt_0.0001_y.pdf Graphic file (type pdf)
+<use img_src/scatter_final_max_100_y_dt_0.0001_y.pdf>
+Package pdftex.def Info: img_src/scatter_final_max_100_y_dt_0.0001_y.pdf  used 
+on input line 23.
+(pdftex.def)             Requested size: 496.33032pt x 483.68863pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 24.
+See the caption package documentation for explanation.
+
+[7 <./img_src/scatter_final_max_100_y_dt_0.0001_y.pdf>]
+<img_src/velocity_final_max_100_y_dt_0.0001_y.pdf, id=320, 1694.73152pt x 1651.
+36945pt>
+File: img_src/velocity_final_max_100_y_dt_0.0001_y.pdf Graphic file (type pdf)
+<use img_src/velocity_final_max_100_y_dt_0.0001_y.pdf>
+Package pdftex.def Info: img_src/velocity_final_max_100_y_dt_0.0001_y.pdf  used
+ on input line 31.
+(pdftex.def)             Requested size: 496.33032pt x 483.62207pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 32.
+See the caption package documentation for explanation.
+
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 22.
- [6 <./img_src/velocity_final_max_5_y_dt_0.001_y.pdf>]
+ [8 <./img_src/velocity_final_max_100_y_dt_0.0001_y.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 22.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 22.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 22.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 563FF03AC74C2DD093FAB77D263747F5;1192.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20989 strings out of 492895
- 340742 string characters out of 3133476
- 691226 words of memory out of 3000000
- 24623 multiletter control sequences out of 15000+200000
+ 20975 strings out of 492946
+ 342629 string characters out of 3135508
+ 680798 words of memory out of 3000000
+ 24582 multiletter control sequences out of 15000+200000
  24425 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,8n,55p,872b,1617s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecti1095.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
-n/ec/dpi600\ectt0900.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\Lordpb\AppData\Local\M
-iKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Lordpb\AppD
-ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\
-Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk>
- <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\e
-crm1000.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecbx1000.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Lordpb\AppData\Local\MiK
-TeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Lordpb\AppDat
-a\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-mib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (6 pages, 531581 bytes).
+ 43i,8n,55p,873b,1617s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\masterdesky\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecti1095.pk> <C:\Users\masterdesky\AppData\Local\MiKTeX\2.9\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\masterdesky\AppData\Local\MiKTeX\2
+.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\masterdesky\AppDat
+a\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ma
+sterdesky\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.
+pk> <C:\Users\masterdesky\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecrm1095.pk> <C:\Users\masterdesky\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\masterdesky\AppData\Local\MiKTeX\
+2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\masterdesky\AppDa
+ta\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\m
+asterdesky\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200
+.pk> <C:\Users\masterdesky\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecrm1440.pk> <C:\Users\masterdesky\AppData\Local\MiKTeX\2.9\fonts/pk/lj
+four/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\masterdesky\AppData\Local\MiKTeX
+\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb>
+Output written on main.pdf (8 pages, 807367 bytes).
 PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
- 38 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 713 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 
