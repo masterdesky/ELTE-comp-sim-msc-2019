@@ -109,7 +109,7 @@ b * \cos{\varphi}
 After acquiring the velocity vectors and coordinates, the (\ref{eq:2}) differential equation could be solved for every $i$th object numerically.
 
 \section{Technical details}
-Since I used Python (especially Jupyter Notebook) for my simulation, it was crucial to speed up the process, since Python is not the fastest programming language regarding runtime. I used two different method to achieve a speed-up. First, the simulation only calculated the $j$th force acting on the $i$th object, if the asteroids, indexed by $i$ and $j$ were closer, than $2R$ to each other. Second, I used the \texttt{numba} library's \texttt{@jit(nopython=True)} decorator to greatly optimize my code. Of course, it has strict limitations, so I was forced to write my code accordingly. \par
+Since I used Python (especially Jupyter Notebook) for my simulation, it was crucial to speed up the process, since Python is not the fastest programming language regarding runtime. I used two different method to achieve a speed-up. First, the simulation only calculated the $j$th force acting on the $i$th object, if the asteroids, indexed by $i$ and $j$ were closer, than $2R$ to each other. Second, I used the \texttt{numba} library's \texttt{@jit(nopython=True)} decorator to greatly optimize my code. This decorator compiles the Python functions into machine code before running them, thus greatly enhancing the runtime. Sadly it has strict limitations, so I was forced to write my code accordingly. \par
 The full source code, used files and everything related to the project could be reached in my GitHub repository\footnote{\url{https://github.com/masterdesky/ELTE\_Comp\_Simulations\_2020}}.
 
 \section{Solving the differential equations}
@@ -143,7 +143,11 @@ After many unsuccessful fixing attempt, - at first glance - I finally solved the
     \includegraphics[width=0.5\textwidth]{{img_src/kin_E_max_5_y_dt_0.001_y}.pdf}
     \captionof{figure}{Kinetic energy changes of an arbitrary satellite. A slight grow of the curve could be observed. The local extremas are marked by red and oranges 'X' markers.} \label{fig:1}
 \end{center}
-Using these parameters, some output could be seen on figure (\ref{fig:2}) and figure (\ref{fig:3}) to demonstrate the functionality of the simulation.
+Using these parameters, some output could be seen on figure (\ref{fig:3}) and figure (\ref{fig:4}) to demonstrate the functionality of the simulation.
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{{img_src/kin_E_max_100_y_dt_0.001_y}.pdf}
+    \captionof{figure}{Kinetic energy changes of an arbitrary satellite. A slight grow of the curve could be observed early, then an exponential upstream blows up the simulation. The local extremas are marked by red and oranges 'X' markers.} \label{fig:2}
+\end{center}
 
 \section{Discussion}
 At last, I've successfully built a gravitational n-body problem simulation, which could handle time-steps relatively fast. Since I couldn't let the simulation run for longer time, and with smaller time-steps, I couldn't detect any kind of gravitational clustering, or Moon-formation in an asteroid belt.

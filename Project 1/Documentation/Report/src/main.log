@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  27 OCT 2019 23:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.22)  12 DEC 2019 19:13
 entering extended mode
 **./main.tex
 (main.tex
@@ -865,13 +865,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 112.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-
-Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 2 might be wrong on input line 120.
-
-
-[2]
+) [2]
 <img_src/kin_E_max_5_y_dt_0.001_y.pdf, id=89, 828.41055pt x 545.2891pt>
 File: img_src/kin_E_max_5_y_dt_0.001_y.pdf Graphic file (type pdf)
 <use img_src/kin_E_max_5_y_dt_0.001_y.pdf>
@@ -889,8 +883,29 @@ Overfull \hbox (15.0pt too wide) in paragraph at lines 143--144
  [] 
  []
 
-) [3 <./img_src/kin_E_max_5_y_dt_0.001_y.pdf>] (text_src/appendix.tex
-<img_src/scatter_final_max_5_y_dt_0.001_y.pdf, id=168, 1134.63902pt x 1105.7309
+<img_src/kin_E_max_100_y_dt_0.001_y.pdf, id=92, 811.66046pt x 545.2891pt>
+File: img_src/kin_E_max_100_y_dt_0.001_y.pdf Graphic file (type pdf)
+<use img_src/kin_E_max_100_y_dt_0.001_y.pdf>
+Package pdftex.def Info: img_src/kin_E_max_100_y_dt_0.001_y.pdf  used on input 
+line 148.
+(pdftex.def)             Requested size: 248.16516pt x 166.71646pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 149.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 148--149
+ [] 
+ []
+
+) [3 <./img_src/kin_E_max_5_y_dt_0.001_y.pdf> <./img_src/kin_E_max_100_y_dt_0.0
+01_y.pdf
+
+pdfTeX warning: pdflatex (file ./img_src/kin_E_max_100_y_dt_0.001_y.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>] [4] (text_src/appendix.tex
+<img_src/scatter_final_max_5_y_dt_0.001_y.pdf, id=234, 1134.63902pt x 1105.7309
 7pt>
 File: img_src/scatter_final_max_5_y_dt_0.001_y.pdf Graphic file (type pdf)
 <use img_src/scatter_final_max_5_y_dt_0.001_y.pdf>
@@ -903,8 +918,8 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 8.
 See the caption package documentation for explanation.
 
-[4 <./img_src/scatter_final_max_5_y_dt_0.001_y.pdf>]
-<img_src/velocity_final_max_5_y_dt_0.001_y.pdf, id=176, 1694.73152pt x 1651.369
+[5 <./img_src/scatter_final_max_5_y_dt_0.001_y.pdf>]
+<img_src/velocity_final_max_5_y_dt_0.001_y.pdf, id=242, 1694.73152pt x 1651.369
 45pt>
 File: img_src/velocity_final_max_5_y_dt_0.001_y.pdf Graphic file (type pdf)
 <use img_src/velocity_final_max_5_y_dt_0.001_y.pdf>
@@ -919,25 +934,29 @@ See the caption package documentation for explanation.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 22.
- [5 <./img_src/velocity_final_max_5_y_dt_0.001_y.pdf>]
+ [6 <./img_src/velocity_final_max_5_y_dt_0.001_y.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 22.
  (main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 22.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 22.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 563FF03AC74C2DD093FAB77D263747F5;1192.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20981 strings out of 492895
- 340496 string characters out of 3133476
- 687226 words of memory out of 3000000
- 24618 multiletter control sequences out of 15000+200000
+ 20989 strings out of 492895
+ 340742 string characters out of 3133476
+ 691226 words of memory out of 3000000
+ 24623 multiletter control sequences out of 15000+200000
  24425 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 43i,8n,55p,861b,1617s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 43i,8n,55p,872b,1617s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecti1095.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappe
 n/ec/dpi600\ectt0900.pk> <C:\Users\Lordpb\AppData\Local\MiKTeX\2.9\fonts/pk/ljf
@@ -963,9 +982,9 @@ mib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (5 pages, 347447 bytes).
+Output written on main.pdf (6 pages, 531581 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 80 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 621 PDF objects out of 1000 (max. 8388607)
+ 38 named destinations out of 1000 (max. 500000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
