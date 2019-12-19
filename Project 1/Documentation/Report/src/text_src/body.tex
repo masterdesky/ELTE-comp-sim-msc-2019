@@ -153,8 +153,10 @@ In contrast, choosing the step size parameter as $dt = 0.0001$, the energy seeme
     \includegraphics[width=0.5\textwidth]{{img_src/kin_E_max_100_y_dt_0.0001_y}.pdf}
     \captionof{figure}{Kinetic energy changes of an arbitrary satellite with time step $dt=0.0001$ for $100$ simulated years. There are no relevant energy growth could be seen. The local extrema are marked by red and oranges 'X' markers.} \label{fig:3}
 \end{center}
+The final positions and velocities of the small bodies, running the simulation with these parameters could be seen on Fig. (\ref{fig:6}) and Fig. (\ref{fig:7}). It seems a wise choice to run the simulation with $dt=0.0001$ and let it run for a long time. However it would still not yield any useful results regarding the moon formation or clustering of bodies in an asteroid belt. The total runtime for $100$ years with this time step was $5.25$ hours, but we should simulate at least a few million years to get any kind of results. The simulation maybe could be made "faster", if we would simulate a system, where the asteroids orbit a gas giant, which also orbits a star, thus creating Lagrangian points, where the small bodies could accumulate easier.
 
 \section{Discussion}
-At last, I've successfully built a gravitational n-body problem simulation, which could handle time-steps relatively fast. Since I couldn't let the simulation run for longer time, and with smaller time-steps, I couldn't detect any kind of gravitational clustering, or Moon-formation in an asteroid belt.
+At least, I've successfully built a gravitational n-body problem simulation, which could handle time steps relatively fast. Since I couldn't let the simulation run for longer time, and with smaller time steps, I couldn't detect any kind of gravitational clustering, or Moon-formation in an asteroid belt. However I proposed some ideas, which could be further examined in the future. \par
+I've also made some animations of the working simulation, which could be reached on my YouTube channel\footnote{\url{https://www.youtube.com/channel/UCBDSB7PdQ3E9l9WSBsTy7cQ}}, under the "Planetary Motions" playlist.
 
 \end{multicols}
